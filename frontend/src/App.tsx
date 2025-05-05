@@ -97,8 +97,8 @@ function App() {
     setMessages((prev) => [...prev, userMessage]);
 
     socket.emit("chatCompletion", {
-      question: prompt,
-      openaiClientID: "user_123",
+      prompt: prompt,
+      clientId: "user_123",
       model,
     });
     setPrompt("");
